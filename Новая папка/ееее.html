@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Подарок на 8 марта</title>
+    <style>
+        body {
+            background-color: #24262b;
+			background-color 3s;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+			transition: background-color 2s ease;
+        }
+		#hiddenText {
+            display: none;
+        }
+        .download-container {
+            background-color: #292b36;
+			background-color 1s ease;
+            border-radius: 10px;
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .download-bar {
+            background-color: black;
+			background-color 1s ease;
+            border-radius: 5px;
+            height: 20px;
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .download-progress {
+            background-color: #ff42e0;
+			background-color 1s ease;
+            height: 100%;
+            width: 0;
+            position: absolute;
+            transition: width 1s;
+        }
+        button {
+            background-color: black;
+			background-color 3s ease;
+            color: #fff;
+            border: none;
+            padding: 20px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 1.2s;
+        }
+        button:hover {
+            background-color: #293675;
+        }
+		}
+		<div style="position:absolute; bottom:0px;">Подсказка: нажмите на сердечко</div> 
+		}
+
+    </style>
+</head>
+<body>
+    <div class="download-container">
+        <h1>Идёт загрузка.. пожалуйста подождите..</h1>
+        <div class="download-bar">
+            <div class="download-progress"></div>
+        </div>
+        <button onclick="download()">→❤️←</button>
+        <p id="Загрузка"></p>
+		<h2 id="hiddenText"> Молодец! Поздравляю с 8 марта, вы млодцы! Так как ты догадалась кликат по сердечку, а также проявила решимость и терпеливость, и буду поддерживать тебя в твоих начинаниях!! Да.. Это, конечно, не лучший подарок от программиста.. Но я сделал все, что мог.. Удачи тебе! И смотри... хорошо проведи время восьмого марта!)
+</h2>
+		
+<div id="completion_text">
+        <h2>С 8 марта! Дождитесь окончания загрузки!)</h2>
+        <h3>Подсказка: кликай по сердечку)
+</h3>
+	
+
+    <script>
+        let downloadProgress = 0;
+
+        function download() {
+            if (downloadProgress == 100) {document.body.style.backgroundColor = 'pink'; document.getElementById('hiddenText').style.display = 'block';
+            } else {
+                downloadProgress += 1;
+                document.querySelector('.download-progress').style.width = downloadProgress + '%';
+                document.getElementById('Загрузка').innerText = `Загрузка: ${downloadProgress}%`;
+            }
+        }
+		
+    </script>
+</body>
+</html>
